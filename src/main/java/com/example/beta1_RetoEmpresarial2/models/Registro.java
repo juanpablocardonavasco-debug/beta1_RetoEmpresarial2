@@ -75,4 +75,6 @@ public class Registro {
     public void setReto(Reto reto) {
         this.reto = reto;
     }
-}
+
+
+    }

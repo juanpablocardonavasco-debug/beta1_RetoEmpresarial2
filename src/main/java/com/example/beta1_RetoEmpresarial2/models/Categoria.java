@@ -1,5 +1,10 @@
 package com.example.beta1_RetoEmpresarial2.models;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,10 +12,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name = "categorias")
@@ -52,8 +53,8 @@ public class Categoria {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescripcion(Object descripcion) {
+        this.descripcion = (String) descripcion;
     }
 
     public List<Reto> getRetos() {
@@ -62,6 +63,15 @@ public class Categoria {
 
     public void setRetos(List<Reto> retos) {
         this.retos = retos;
+    }
+
+    public Object getNivel() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNivel'");
+    }
+
+    public void setNivel(Object nivel) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
 
